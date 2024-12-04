@@ -4,14 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Memes</title>
-    <link rel="stylesheet" href="./estilos/styles.css">
+    <link rel="stylesheet" href="./estilos/styles.css"> <!--Linkeo CSS-->
+    <script src="https://kit.fontawesome.com/8e139616bd.js" crossorigin="anonymous"></script> <!--Linkeo iconos Font Awesome-->
 </head>
+<header>
+   <h1 id="titulo-pagina">Generador de Memes</h1> 
+   <div id="contenedor-botones-header">
+    <button id="boton-configuracion-imagen">
+        <i class="fa-regular fa-image" style="color: #000000;"></i>
+        Imagen</button>
+    <button id="boton-configuracion-texto">
+        <i class="fa-solid fa-font" style="color: #000000;"></i>
+        Texto</button>
+    <button id="boton-modo-oscuro">
+        <i class="fa-regular fa-lightbulb" style="color: #000000;"></i>
+        Modo oscuro</button>
+   </div>
+</header>
 <body>
-   <h1>Generador de Memes</h1> 
+    <main id="contenedor-meme">
+        <p id="texto-meme-superior"></p>
+        <img>
+        <p id="texto-meme-inferior"></p>
+        <button id="boton-descargar-meme">
+            <i class="fa-solid fa-download" style="color: #000000;"></i>
+            Descargar meme</button>
+    </main> 
+    <footer>
+       <p>Creado con amor por Maria Fernanda Castro ♥ </p> 
+    </footer>
 
-
-
-   
-    <script src="./index.js"></script>
+    <script src="./index.js"></script> <!--Linkeo JavaScript-->
 </body>
 </html>
