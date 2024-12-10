@@ -1,0 +1,86 @@
+/* HEADER */
+header {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(224, 224, 224);
+    width: 100%;
+}
+
+#titulo-pagina {
+margin-bottom: 0;
+font-weight: lighter;
+}
+
+#lista-botones-header {
+   padding: 0%;
+}
+
+.boton {
+    border: none;
+    background-color:rgb(224, 224, 224);
+}
+
+
+/* BODY */
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+#contenedor-meme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#meme {
+    width: 100%;
+    max-width: 610px;
+    height: 610px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#imagen-meme {
+    width: 100%;
+    flex-grow: 1;
+    background-size: cover;
+    margin: 0;
+}
+
+.texto-meme {
+    background-color: white;
+    width: 100%;
+    color: black;
+    text-align: center;
+    padding: 35px 0px;
+    font-size: 25px;
+    font-weight: 800;
+    font-family: Verdana;
+    margin: 0;
+    
+}
+
+#boton-descargar-meme {
+    margin-top: 30px;
+    padding: 15px 15px;
+    height: auto;
+    background-color: #2e7d32;
+    color: white;
+    border: #2e7d32;
+    border-radius: 5px;
+}
+    
+
+/* FOOTER */ 
+
+footer p {
+  color: rgba(128, 128, 128, 0.13);  
+  text-align: center;
+}
