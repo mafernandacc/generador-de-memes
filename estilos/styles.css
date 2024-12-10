@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
 /* HEADER */
 header {
     display: flex;
@@ -76,7 +82,42 @@ body {
     border: #2e7d32;
     border-radius: 5px;
 }
-    
+
+
+/*BARRA LATERAL*/ 
+.contenedor-aside {
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100%;
+}
+
+.aside h2 {
+    font-size: 12px;
+    text-align: center;
+
+}
+
+/*BARRA LATERAL IMG*/
+.boton-aside-img {
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+ 
+}
+
+#cargar-img {
+    margin: 5px;
+    font-size: 10px;
+}
+
+#input-fondo select {
+    margin: 5px;
+
+}
 
 /* FOOTER */ 
 
