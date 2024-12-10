@@ -4,14 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Memes</title>
-    <link rel="stylesheet" href="./estilos/styles.css">
+    <link rel="stylesheet" href="./estilos/styles.css"> <!--Linkeo CSS-->
+    <script src="https://kit.fontawesome.com/8e139616bd.js" crossorigin="anonymous"></script> <!--Linkeo iconos Font Awesome-->
+    <link rel="icon" type="image/jpg" href="https://images.vexels.com/content/134485/preview/cool-emoji-emoticon-bc7065.png"/> <!--Linkeo favicon-->
 </head>
+
+<header>
+   <h1 id="titulo-pagina">Generador de Memes</h1> <!--Titulo principal de la pagina-->
+
+   <!--BOTONES DEL HEADER-->
+   <div id="contenedor-botones-header"> 
+        <ul id="lista-botones-header">
+            <button class="boton" id="boton-configuracion-imagen"> <!--Boton configuración imagen--> 
+                <i class="fa-regular fa-image" style="color: rgb(0, 0, 0);"></i>
+                Imagen
+            </button>
+            <button class="boton" id="boton-configuracion-texto">  <!--Boton configuración texto--> 
+                <i class="fa-solid fa-font" style="color: rgb(0, 0, 0);"></i>
+                Texto
+            </button>
+            <button class="boton"  id="boton-modo-oscuro">
+                <i class="fa-regular fa-lightbulb" style="color: rgb(0, 0, 0);"></i>  <!--Boton cambio modo oscuro/modo claro--> 
+                Modo oscuro
+            </button>
+        </ul>
+   </div>
+</header>
+
 <body>
-   <h1>Generador de Memes</h1> 
 
+   <!--BARRAS LATERALES-->
 
+   <!--BARRA LATERAL IMG-->
+   <div  id="contenedor-aside-img"  class="contenedor-aside">
+        <div class="sidebar" id="sidebar-img">
+            <h2>IMAGEN</h2>
 
-   
-    <script src="./index.js"></script>
+            <!--AQUI SE AGREGARAN LAS FUNCIONES DE CONFIGURACION DE IMAGEN-->
+
+            <!--Botón URL-->
+            <div class="boton-aside-img" id="input-url">
+                <label class="label-aside">URL</label>
+                <input type="text" id="url-img" placeholder="Pega el URL de la imagen aquí" />
+                <button id="cargar-img">Cargar Imagen</button>
+            </div>
+
+            <!--Botón FONDO-->
+            <div class="boton-aside-img" id="input-fondo">
+                <label class="label-aside">FONDO</label>
+                <input type="color" id="color-fondo-img">
+                <select>
+                    <option>Ninguno</option>
+                    <option>Aclarar</option>
+                    <option>Oscurecer</option>
+                    <option>Diferencia</option>
+                    <option>Luminosidad</option>
+                    <option>Multiplicar</option>
+                </select>
+            </div>
+            
+            <!--Sección FILTROS-->
+            <div id="input-filtros">
+                <!--Botón BRILLO-->
+                <div class="boton-aside-img" id="input-brillo">
+                    <label>BRILLO</label>
+                    <input type="range" id="brillo-img">
+                </div>
+
+                <!--Botón OPACIDAD -->
+                <div class="boton-aside-img" id="input-opacidad">
+                    <label>OPACIDAD</label>
+                    <input type="range" id="opacidad-img">
+                </div>
+
+                <!--Botón CONTRASTE -->
+                <div class="boton-aside-img" id="input-contraste">
+                    <label>CONTRASTE</label>
+                    <input type="range" id="contraste-img">
+                </div>
+
+                <!--Botón DESENFOQUE -->
+                <div class="boton-aside-img" id="input-desenfoque">
+                    <label>DESENFOQUE</label>
+                    <input type="range" id="desenfoque-img">
+                </div>
+
+                <!--Botón ESCALA DE GRISES -->
+                <div class="boton-aside-img" id="input-escala">
+                    <label>ESCALA DE GRISES</label>
+                    <input type="range" id="escala-img">
+                </div>
+
+                <!--Botón SEPIA-->
+                <div class="boton-aside-img" id="input-sepia">
+                    <label>SEPIA</label>
+                    <input type="range" id="sepia-img">
+                </div>
+
+                <!--Botón HUE -->
+                <div class="boton-aside-img" id="input-hue">
+                    <label>HUE</label>
+                    <input type="range" id="hue-img">
+                </div>
+
+                <!--Botón SATURADO -->
+                <div class="boton-aside-img" id="input-saturado">
+                    <label>SATURADO</label>
+                    <input type="range" id="saturado-img">
+                </div>
+
+                <!--Botón NEGATIVO -->
+                <div class="boton-aside-img" id="input-negativo">
+                    <label>NEGATIVO</label>
+                    <input type="range" id="negativo-img">
+                </div>
+                
+                <!--Botón RESTABLECER FILTROS-->
+                <div class="boton-aside-img" id="input-negativo"> 
+                    <button id="restablecer-filtros">Restablecer filtros</button>
+                </div>
+
+            </div>
+
+        </div> 
+    </div>
+
+    <!--BARRA LATERAL TXT-->
+
+    <div id="contenedor-aside-texto" class="contenedor-aside">
+        <div class="sidebar" id="sidebar-texto">
+            <h2></h2>
+            <!--AQUI SE AGREGARAN LAS FUNCIONES DE CONFIGURACION DEL TEXTO-->
+        </div>
+    </div>
+
+    <!--CUERPO DEL MEME-->
+    <main id="contenedor-meme">
+        <div id="meme">
+            <p class="texto-meme" id="texto-meme-superior">TEXTO SUPERIOR</p> <!--Texto superior del meme--> 
+
+            <img id="imagen-meme">  <!--Imagen ingresada por medio de un URL-->
+
+            <p class="texto-meme" id="texto-meme-inferior">TEXTO INFERIOR</p> <!--Texto inferior del meme-->
+        </div>
+        <button id="boton-descargar-meme"> <!--Boton de descarga-->
+            <i class="fa-solid fa-download" style="color: rgb(250, 250, 250);"></i>
+            Descargar meme
+        </button>
+    </main> 
+
+    <footer>
+       <p>Creado con ♥ por Mafer Castro </p> <!--Footer OPCIONAL con linkeo a redes sociales-->
+    </footer>
+
+    <script src="./index.js"></script> <!--Linkeo JavaScript-->
 </body>
 </html>
