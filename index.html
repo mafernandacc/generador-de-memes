@@ -7,23 +7,24 @@
     <link rel="stylesheet" href="./estilos/styles.css"> <!--Linkeo CSS-->
     <script src="https://kit.fontawesome.com/8e139616bd.js" crossorigin="anonymous"></script> <!--Linkeo iconos Font Awesome-->
     <link rel="icon" type="image/jpg" href="https://images.vexels.com/content/134485/preview/cool-emoji-emoticon-bc7065.png"/> <!--Linkeo favicon-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script> <!--Linkeo libreria para descargar meme-->
 </head>
 
 <header>
-   <h1 id="titulo-pagina">Generador de Memes</h1> <!--Titulo principal de la pagina-->
+   <h1 id="tituloPagina">Generador de Memes</h1> <!--Titulo principal de la pagina-->
 
    <!--BOTONES DEL HEADER-->
-   <div id="contenedor-botones-header"> 
-        <ul id="lista-botones-header">
-            <button class="boton" id="boton-configuracion-imagen"> <!--Boton configuración imagen--> 
+   <div id="contenedorBotonesHeader"> 
+        <ul id="listaBotonesHeader">
+            <button class="boton" id="botonConfiguracionImagen"> <!--Boton configuración imagen--> 
                 <i class="fa-regular fa-image" style="color: rgb(0, 0, 0);"></i>
                 Imagen
             </button>
-            <button class="boton" id="boton-configuracion-texto">  <!--Boton configuración texto--> 
+            <button class="boton" id="botonConfiguracionTexto">  <!--Boton configuración texto--> 
                 <i class="fa-solid fa-font" style="color: rgb(0, 0, 0);"></i>
                 Texto
             </button>
-            <button class="boton"  id="boton-modo-oscuro">
+            <button class="boton"  id="botonModoOscuro">
                 <i class="fa-regular fa-lightbulb" style="color: rgb(0, 0, 0);"></i>  <!--Boton cambio modo oscuro/modo claro--> 
                 Modo oscuro
             </button>
@@ -33,125 +34,125 @@
 
 <body>
 
-   <!--BARRAS LATERALES-->
-
-   <!--BARRA LATERAL IMG-->
-   <div  id="contenedor-aside-img"  class="contenedor-aside">
-        <div class="aside" id="aside-img">
-            <h2>IMAGEN</h2>
-
-            <!--AQUI SE AGREGARAN LAS FUNCIONES DE CONFIGURACION DE IMAGEN-->
-
-            <!--Botón URL-->
-            <div class="boton-aside-img" id="input-url">
-                <label class="label-aside">URL</label>
-                <input type="text" id="url-img" placeholder="Pega el URL de la imagen" />
-                <button id="cargar-img">Cargar Imagen</button>
-            </div>
-
-            <!--Botón FONDO-->
-            <div class="boton-aside-img" id="input-fondo">
-                <label class="label-aside">FONDO</label>
-                <input type="color" id="color-fondo-img">
-                <select>
-                    <option>Ninguno</option>
-                    <option>Aclarar</option>
-                    <option>Oscurecer</option>
-                    <option>Diferencia</option>
-                    <option>Luminosidad</option>
-                    <option>Multiplicar</option>
-                </select>
-            </div>
-            
-            <!--Sección FILTROS-->
-            <div id="input-filtros">
-                <!--Botón BRILLO-->
-                <div class="boton-aside-img" id="input-brillo">
-                    <label>BRILLO</label>
-                    <input type="range" id="brillo-img">
-                </div>
-
-                <!--Botón OPACIDAD -->
-                <div class="boton-aside-img" id="input-opacidad">
-                    <label>OPACIDAD</label>
-                    <input type="range" id="opacidad-img">
-                </div>
-
-                <!--Botón CONTRASTE -->
-                <div class="boton-aside-img" id="input-contraste">
-                    <label>CONTRASTE</label>
-                    <input type="range" id="contraste-img">
-                </div>
-
-                <!--Botón DESENFOQUE -->
-                <div class="boton-aside-img" id="input-desenfoque">
-                    <label>DESENFOQUE</label>
-                    <input type="range" id="desenfoque-img">
-                </div>
-
-                <!--Botón ESCALA DE GRISES -->
-                <div class="boton-aside-img" id="input-escala">
-                    <label>ESCALA DE GRISES</label>
-                    <input type="range" id="escala-img">
-                </div>
-
-                <!--Botón SEPIA-->
-                <div class="boton-aside-img" id="input-sepia">
-                    <label>SEPIA</label>
-                    <input type="range" id="sepia-img">
-                </div>
-
-                <!--Botón HUE -->
-                <div class="boton-aside-img" id="input-hue">
-                    <label>HUE</label>
-                    <input type="range" id="hue-img">
-                </div>
-
-                <!--Botón SATURADO -->
-                <div class="boton-aside-img" id="input-saturado">
-                    <label>SATURADO</label>
-                    <input type="range" id="saturado-img">
-                </div>
-
-                <!--Botón NEGATIVO -->
-                <div class="boton-aside-img" id="input-negativo">
-                    <label>NEGATIVO</label>
-                    <input type="range" id="negativo-img">
-                </div>
-                
-                <!--Botón RESTABLECER FILTROS-->
-                <div class="boton-aside-img" id="input-negativo"> 
-                    <button id="restablecer-filtros">Restablecer filtros</button>
-                </div>
-
-            </div>
-
-        </div> 
-    </div>
-
-    <!--BARRA LATERAL TXT-->
-
-    <div id="contenedor-aside-texto" class="contenedor-aside">
-        <div class="sidebar" id="sidebar-texto">
-            <h2></h2>
-            <!--AQUI SE AGREGARAN LAS FUNCIONES DE CONFIGURACION DEL TEXTO-->
-        </div>
-    </div>
-
     <!--CUERPO DEL MEME-->
-    <main id="contenedor-meme">
+    <main id="contenedorMeme">
         <div id="meme">
-            <p class="texto-meme" id="texto-meme-superior">TEXTO SUPERIOR</p> <!--Texto superior del meme--> 
+            <p class="textoMeme" id="textoMemeSuperior">TEXTO SUPERIOR</p> <!--Texto superior del meme--> 
 
-            <img id="imagen-meme">  <!--Imagen ingresada por medio de un URL-->
+            <img id="imagenMeme">  <!--Imagen ingresada por medio de un URL-->
 
-            <p class="texto-meme" id="texto-meme-inferior">TEXTO INFERIOR</p> <!--Texto inferior del meme-->
+            <p class="textoMeme" id="textoMemeInferior">TEXTO INFERIOR</p> <!--Texto inferior del meme-->
         </div>
-        <button id="boton-descargar-meme"> <!--Boton de descarga-->
+        <button id="botonDescargarMeme"> <!--Boton de descarga-->
             <i class="fa-solid fa-download" style="color: rgb(250, 250, 250);"></i>
             Descargar meme
         </button>
     </main> 
+
+    <!--BARRAS LATERALES-->
+
+   <!--BARRA LATERAL IMG-->
+   <div  id="contenedorAsideImg"  class="contenedorAside">
+    <div class="aside" id="asideImg">
+        <h2>IMAGEN</h2>
+
+        <!--AQUI SE AGREGARAN LAS FUNCIONES DE CONFIGURACION DE IMAGEN-->
+
+        <!--Botón URL-->
+        <div class="botonAsideImg" id="inputUrl">
+            <label class="labelAside">URL</label>
+            <input type="text" id="urlImg" placeholder="Pega el URL de la imagen" />
+            <button id="cargarImg">Cargar Imagen</button>
+        </div>
+
+        <!--Botón FONDO-->
+        <div class="botonAsideImg" id="inputFondo">
+            <label class="labelAside">FONDO</label>
+            <input type="color" id="colorFondoImg">
+            <select id="blendMode">
+                <option value="normal">Normal</option>
+                <option value="multiply">Multiplicar</option>
+                <option value="screen">Pantalla</option>
+                <option value="overlay">Superponer</option>
+                <option value="darken">Oscurecer</option>
+                <option value="lighten">Aclarar</option>
+            </select>
+        </div>
+        
+        <!--Sección FILTROS-->
+        <div id="inputFiltros">
+            <!--Botón BRILLO-->
+            <div class="botonAsideImg" id="inputBrillo">
+                <label>BRILLO</label>
+                <input type="range" id="brilloImg">
+            </div>
+
+            <!--Botón OPACIDAD -->
+            <div class="botonAsideImg" id="inputOpacidad">
+                <label>OPACIDAD</label>
+                <input type="range" id="opacidadImg">
+            </div>
+
+            <!--Botón CONTRASTE -->
+            <div class="botonAsideImg" id="inputContraste">
+                <label>CONTRASTE</label>
+                <input type="range" id="contrasteImg">
+            </div>
+
+            <!--Botón DESENFOQUE -->
+            <div class="botonAsideImg" id="inputDesenfoque">
+                <label>DESENFOQUE</label>
+                <input type="range" id="desenfoqueImg">
+            </div>
+
+            <!--Botón ESCALA DE GRISES -->
+            <div class="botonAsideImg" id="inputEscala">
+                <label>ESCALA DE GRISES</label>
+                <input type="range" id="escalaImg">
+            </div>
+
+            <!--Botón SEPIA-->
+            <div class="botonAsideImg" id="inputSepia">
+                <label>SEPIA</label>
+                <input type="range" id="sepiaImg">
+            </div>
+
+            <!--Botón HUE -->
+            <div class="botonAsideImg" id="inputHue">
+                <label>HUE</label>
+                <input type="range" id="hueImg">
+            </div>
+
+            <!--Botón SATURADO -->
+            <div class="botonAsideImg" id="inputSaturado">
+                <label>SATURADO</label>
+                <input type="range" id="saturadoImg">
+            </div>
+
+            <!--Botón NEGATIVO -->
+            <div class="botonAsideImg" id="inputNegativo">
+                <label>NEGATIVO</label>
+                <input type="range" id="negativoImg">
+            </div>
+            
+            <!--Botón RESTABLECER FILTROS-->
+            <div class="botonAsideImg" id="inputNegativo"> 
+                <button id="restablecerFiltros">Restablecer filtros</button>
+            </div>
+
+        </div>
+
+    </div> 
+</div>
+
+<!--BARRA LATERAL TXT-->
+
+<div id="contenedorAsideTexto" class="contenedorAside">
+    <div class="sidebar" id="sidebarTexto">
+        <h2>HOLA, YO CONFIGURO EL TEXTO</h2>
+        <!--AQUI SE AGREGARAN LAS FUNCIONES DE CONFIGURACION DEL TEXTO-->
+    </div>
+</div>
 
     <footer>
        <p>Creado con ♥ por Mafer Castro </p> <!--Footer OPCIONAL con linkeo a redes sociales-->
