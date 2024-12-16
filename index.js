@@ -165,7 +165,7 @@ function actualizarFiltro() {
   `;
 }
 
-//Evento para actulizar la imagen 
+//Evento para actulizar la imagen
 $brilloImg.addEventListener("input", actualizarFiltro);
 $opacidadImg.addEventListener("input", actualizarFiltro);
 $contrasteImg.addEventListener("input", actualizarFiltro);
@@ -193,3 +193,233 @@ $restablecerFiltros.addEventListener("click", () => {
 
   actualizarFiltro();
 });
+
+
+
+//SECCIÓN BARRA LATERAL TXT//
+
+//ESCRIBIR TEXTO
+//Guardar en variables let 
+let $inputTextoSuperior = document.getElementById('botonTextoSuperior');
+let $textoMemeSuperior = document.getElementById('textoMemeSuperior');
+
+let $inputTextoInferior = document.getElementById('botonTextoInferior');
+let $textoMemeInferior = document.getElementById('textoMemeInferior');
+
+//Funciones
+$inputTextoSuperior.addEventListener('input', function() {
+  $textoMemeSuperior.textContent = $inputTextoSuperior.value;
+});
+
+$inputTextoInferior.addEventListener('input', function() {
+  $textoMemeInferior.textContent = $inputTextoInferior.value;
+});
+
+//SIN TEXTO 
+document.addEventListener('DOMContentLoaded', function() {
+  // Guardar elmentos
+  let $inputTextoSuperior = document.getElementById('botonTextoSuperior');
+  let $textoMemeSuperior = document.getElementById('textoMemeSuperior');
+  let $checkboxSinTextoSuperior = document.getElementById('botonSinTextoSuperior');
+
+  let $inputTextoInferior = document.getElementById('botonTextoInferior');
+  let $textoMemeInferior = document.getElementById('textoMemeInferior');
+  let $checkboxSinTextoInferior = document.getElementById('botonSinTextoInferior');
+
+  // Evento agregar texto superior
+  $inputTextoSuperior.addEventListener('input', function() {
+    if ($textoMemeSuperior) {
+      $textoMemeSuperior.textContent = $inputTextoSuperior.value;
+    }
+  });
+
+  //Evento agregar textro inferior
+  $inputTextoInferior.addEventListener('input', function() {
+    if ($textoMemeInferior) {
+      $textoMemeInferior.textContent = $inputTextoInferior.value;
+    }
+  });
+
+  // Evento seleccionar el checkbox para eliminar el texto superior
+  $checkboxSinTextoSuperior.addEventListener('change', function() {
+    if ($checkboxSinTextoSuperior.checked) {
+      if ($textoMemeSuperior) {
+        $textoMemeSuperior.remove();
+        $textoMemeSuperior = null;
+      }
+    } else {
+      if (!$textoMemeSuperior) {
+        $textoMemeSuperior = document.createElement('p');
+        $textoMemeSuperior.id = 'textoMemeSuperior';
+        $textoMemeSuperior.className = 'textoMeme';
+        $textoMemeSuperior.textContent = $inputTextoSuperior.value;
+        document.getElementById('meme').prepend($textoMemeSuperior);
+      }
+    }
+  });
+
+  // Evento seleccionar el checkbox para eliminar el texto inferior
+  $checkboxSinTextoInferior.addEventListener('change', function() {
+    if ($checkboxSinTextoInferior.checked) {
+      if ($textoMemeInferior) {
+        $textoMemeInferior.remove();
+        $textoMemeInferior = null;
+      }
+    } else {
+      if (!$textoMemeInferior) {
+        $textoMemeInferior = document.createElement('p');
+        $textoMemeInferior.id = 'textoMemeInferior';
+        $textoMemeInferior.className = 'textoMeme';
+        $textoMemeInferior.textContent = $inputTextoInferior.value;
+        document.getElementById('meme').appendChild($textoMemeInferior);
+      }
+    }
+  });
+});
+
+//FUENTES
+// Guardar select en una constante
+const $seleccFuente = document.getElementById('seleccFuente');
+
+// Función para cambiar la fuente
+$seleccFuente.addEventListener('change', function() {
+  const fuenteSeleccionada = $seleccFuente.value;
+
+  const $textoSuperior = document.getElementById('textoMemeSuperior');
+  const $textoInferior = document.getElementById('textoMemeInferior');
+
+  $textoSuperior.style.fontFamily = fuenteSeleccionada;
+  $textoInferior.style.fontFamily = fuenteSeleccionada;
+});
+
+
+//TAMAÑO FUENTE 
+// Guardar constante 
+const $seleccionarTamañoFuente = document.getElementById('seleccionarTamañoFuente');
+
+// Función para cambiar el tamaño de fuente
+$seleccionarTamañoFuente.addEventListener('input', function() {
+
+  const tamañoFuenteSeleccionado = $seleccionarTamañoFuente.value;
+
+  
+  const $textoSuperior = document.getElementById('textoMemeSuperior');
+  const $textoInferior = document.getElementById('textoMemeInferior');
+
+  $textoSuperior.style.fontSize = `${tamañoFuenteSeleccionado}px`;
+  $textoInferior.style.fontSize = `${tamañoFuenteSeleccionado}px`;
+});
+
+//POSICIÓN DEL TEXTO
+// Guardar constantes
+const $botonAlinearIzq = document.getElementById('botónAlinearIzq');
+const $botonAlinearCent = document.getElementById('botónAlinearCent');
+const $botonAlinearDer = document.getElementById('botónAlinearDer');
+const $textoSuperior = document.getElementById('textoMemeSuperior');
+const $textoInferior = document.getElementById('textoMemeInferior');
+
+// Función para alinear a la izquierda
+$botonAlinearIzq.addEventListener('click', function() {
+    $textoSuperior.style.textAlign = 'left';
+    $textoInferior.style.textAlign = 'left';
+});
+
+// Función para alinear al centro
+$botonAlinearCent.addEventListener('click', function() {
+    $textoSuperior.style.textAlign = 'center';
+    $textoInferior.style.textAlign = 'center';
+});
+
+// Función para alinear a la derecha
+$botonAlinearDer.addEventListener('click', function() {
+    $textoSuperior.style.textAlign = 'right';
+    $textoInferior.style.textAlign = 'right';
+});
+
+//COLOR TEXTO 
+//Guardar botón para cambio de color en una constante
+const $botonColorTxt = document.getElementById('botonColorTxt');
+
+//Función para cambair texto de color
+$botonColorTxt.addEventListener('input', function() {
+  const colorSeleccionado = $botonColorTxt.value; 
+  $textoSuperior.style.color = colorSeleccionado;  
+  $textoInferior.style.color = colorSeleccionado;  
+});
+
+
+//COLOR FONDO TEXTO
+//Guardar botón para cambio de fondo en una constante 
+const $botonColorFondo = document.getElementById('botonColorFondo');
+const $botonFondoTransparente = document.getElementById('botonFondoTransparente');
+
+//Función que cambia el color de fondo
+$botonColorFondo.addEventListener('input', function() {
+  const colorFondoSeleccionado = $botonColorFondo.value; 
+  $textoSuperior.style.backgroundColor = colorFondoSeleccionado;  
+  $textoInferior.style.backgroundColor = colorFondoSeleccionado;  
+});
+
+//Función que hace transparente el fondo 
+$botonFondoTransparente.addEventListener('change', function() {
+  if ($botonFondoTransparente.checked) {
+
+      $textoSuperior.style.backgroundColor = 'transparent';
+      $textoInferior.style.backgroundColor = 'transparent';
+  } else {
+      const colorFondoSeleccionado = $botonColorFondo.value;
+      $textoSuperior.style.backgroundColor = colorFondoSeleccionado;
+      $textoInferior.style.backgroundColor = colorFondoSeleccionado;
+  }
+});
+
+//CONTORNO 
+// Guardar botones en constantes
+const $botonClaroContorno = document.getElementById('botonClaroContorno');
+const $botonOscuroContorno = document.getElementById('botonOscuroContorno');
+const $ningunContorno = document.getElementById('ningunContorno');
+
+
+// Evento para agregar contorno blanco
+$botonClaroContorno.addEventListener('click', function() {
+    $textoSuperior.style.textShadow = '2px 2px 4px white';  
+    $textoInferior.style.textShadow = '2px 2px 4px white';  
+});
+
+// Evento para agregar contorno negro
+$botonOscuroContorno.addEventListener('click', function() {
+    $textoSuperior.style.textShadow = '2px 2px 4px black';  
+    $textoInferior.style.textShadow = '2px 2px 4px black';  
+});
+
+// Evento para eliminar contorno
+$ningunContorno.addEventListener('click', function() {
+    $textoSuperior.style.textShadow = 'none';  
+    $textoInferior.style.textShadow = 'none';  
+});
+
+//ESPACIADO 
+// Guardar botón en constante
+const $botonEspaciado = document.getElementById('botonEspaciado');
+
+// Evento para cambiar el espaciado entre letras
+$botonEspaciado.addEventListener('input', function() {
+    const espaciadoSeleccionado = $botonEspaciado.value; 
+    $textoSuperior.style.letterSpacing = `${espaciadoSeleccionado}px`; 
+    $textoInferior.style.letterSpacing = `${espaciadoSeleccionado}px`; 
+});
+
+
+//INTERLINEADO 
+// Guardar botón
+const $botonInterlineado = document.getElementById('botonInterlineado');
+
+// Evento para cambiar el interlineado
+$botonInterlineado.addEventListener('change', function() {
+    const interlineadoSeleccionado = $botonInterlineado.value; 
+    $textoSuperior.style.lineHeight = interlineadoSeleccionado;  
+    $textoInferior.style.lineHeight = interlineadoSeleccionado;  
+});
+
+
+
