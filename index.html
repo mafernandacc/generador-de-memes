@@ -51,108 +51,217 @@
 
     <!--BARRAS LATERALES-->
 
-   <!--BARRA LATERAL IMG-->
-   <div  id="contenedorAsideImg"  class="contenedorAside">
-    <div class="aside" id="asideImg">
-        <h2>IMAGEN</h2>
+    <!--BARRA LATERAL IMG-->
+    <div  id="contenedorAsideImg"  class="contenedorAside">
+        <div class="aside" id="asideImg">
+            <h2>IMAGEN</h2>
 
-        <!--AQUI SE AGREGARAN LAS FUNCIONES DE CONFIGURACION DE IMAGEN-->
+            <!--AQUI SE AGREGARAN LAS FUNCIONES DE CONFIGURACION DE IMAGEN-->
 
-        <!--Botón URL-->
-        <div class="botonAsideImg" id="inputUrl">
-            <label class="labelAside">URL</label>
-            <input type="text" id="urlImg" placeholder="Pega el URL de la imagen" />
-            <button id="cargarImg">Cargar Imagen</button>
-        </div>
-
-        <!--Botón FONDO-->
-        <div class="botonAsideImg" id="inputFondo">
-            <label class="labelAside">FONDO</label>
-            <input type="color" id="colorFondoImg">
-            <select id="blendMode">
-                <option value="normal">Normal</option>
-                <option value="multiply">Multiplicar</option>
-                <option value="screen">Pantalla</option>
-                <option value="overlay">Superponer</option>
-                <option value="darken">Oscurecer</option>
-                <option value="lighten">Aclarar</option>
-            </select>
-        </div>
-        
-        <!--Sección FILTROS-->
-        <div id="inputFiltros">
-            <!--Botón BRILLO-->
-            <div class="botonAsideImg" id="inputBrillo">
-                <label>BRILLO</label>
-                <input type="range" id="brilloImg">
+            <!--Botón URL-->
+            <div class="botonAsideImg" id="inputUrl">
+                <label class="labelAside">URL</label>
+                <input type="text" id="urlImg" placeholder="Pega el URL de la imagen" />
+                <button id="cargarImg">Cargar Imagen</button>
             </div>
 
-            <!--Botón OPACIDAD -->
-            <div class="botonAsideImg" id="inputOpacidad">
-                <label>OPACIDAD</label>
-                <input type="range" id="opacidadImg">
-            </div>
-
-            <!--Botón CONTRASTE -->
-            <div class="botonAsideImg" id="inputContraste">
-                <label>CONTRASTE</label>
-                <input type="range" id="contrasteImg">
-            </div>
-
-            <!--Botón DESENFOQUE -->
-            <div class="botonAsideImg" id="inputDesenfoque">
-                <label>DESENFOQUE</label>
-                <input type="range" id="desenfoqueImg">
-            </div>
-
-            <!--Botón ESCALA DE GRISES -->
-            <div class="botonAsideImg" id="inputEscala">
-                <label>ESCALA DE GRISES</label>
-                <input type="range" id="escalaImg">
-            </div>
-
-            <!--Botón SEPIA-->
-            <div class="botonAsideImg" id="inputSepia">
-                <label>SEPIA</label>
-                <input type="range" id="sepiaImg">
-            </div>
-
-            <!--Botón HUE -->
-            <div class="botonAsideImg" id="inputHue">
-                <label>HUE</label>
-                <input type="range" id="hueImg">
-            </div>
-
-            <!--Botón SATURADO -->
-            <div class="botonAsideImg" id="inputSaturado">
-                <label>SATURADO</label>
-                <input type="range" id="saturadoImg">
-            </div>
-
-            <!--Botón NEGATIVO -->
-            <div class="botonAsideImg" id="inputNegativo">
-                <label>NEGATIVO</label>
-                <input type="range" id="negativoImg">
+            <!--Botón FONDO-->
+            <div class="botonAsideImg" id="inputFondo">
+                <label class="labelAside">FONDO</label>
+                <input type="color" id="colorFondoImg">
+                <select id="blendMode">
+                    <option value="normal">Normal</option>
+                    <option value="multiply">Multiplicar</option>
+                    <option value="screen">Pantalla</option>
+                    <option value="overlay">Superponer</option>
+                    <option value="darken">Oscurecer</option>
+                    <option value="lighten">Aclarar</option>
+                </select>
             </div>
             
-            <!--Botón RESTABLECER FILTROS-->
-            <div class="botonAsideImg" id="inputNegativo"> 
-                <button id="restablecerFiltros">Restablecer filtros</button>
+            <!--Sección FILTROS-->
+            <div id="inputFiltros">
+                <!--Botón BRILLO-->
+                <div class="botonAsideImg" id="inputBrillo">
+                    <label>BRILLO</label>
+                    <input type="range" id="brilloImg">
+                </div>
+
+                <!--Botón OPACIDAD -->
+                <div class="botonAsideImg" id="inputOpacidad">
+                    <label>OPACIDAD</label>
+                    <input type="range" id="opacidadImg">
+                </div>
+
+                <!--Botón CONTRASTE -->
+                <div class="botonAsideImg" id="inputContraste">
+                    <label>CONTRASTE</label>
+                    <input type="range" id="contrasteImg">
+                </div>
+
+                <!--Botón DESENFOQUE -->
+                <div class="botonAsideImg" id="inputDesenfoque">
+                    <label>DESENFOQUE</label>
+                    <input type="range" id="desenfoqueImg">
+                </div>
+
+                <!--Botón ESCALA DE GRISES -->
+                <div class="botonAsideImg" id="inputEscala">
+                    <label>ESCALA DE GRISES</label>
+                    <input type="range" id="escalaImg">
+                </div>
+
+                <!--Botón SEPIA-->
+                <div class="botonAsideImg" id="inputSepia">
+                    <label>SEPIA</label>
+                    <input type="range" id="sepiaImg">
+                </div>
+
+                <!--Botón HUE -->
+                <div class="botonAsideImg" id="inputHue">
+                    <label>HUE</label>
+                    <input type="range" id="hueImg">
+                </div>
+
+                <!--Botón SATURADO -->
+                <div class="botonAsideImg" id="inputSaturado">
+                    <label>SATURADO</label>
+                    <input type="range" id="saturadoImg">
+                </div>
+
+                <!--Botón NEGATIVO -->
+                <div class="botonAsideImg" id="inputNegativo">
+                    <label>NEGATIVO</label>
+                    <input type="range" id="negativoImg">
+                </div>
+                
+                <!--Botón RESTABLECER FILTROS-->
+                <div class="botonAsideImg" id="inputNegativo"> 
+                    <button id="restablecerFiltros">Restablecer filtros</button>
+                </div>
+
             </div>
 
-        </div>
-
-    </div> 
-</div>
-
-<!--BARRA LATERAL TXT-->
-
-<div id="contenedorAsideTexto" class="contenedorAside">
-    <div class="sidebar" id="sidebarTexto">
-        <h2>HOLA, YO CONFIGURO EL TEXTO</h2>
-        <!--AQUI SE AGREGARAN LAS FUNCIONES DE CONFIGURACION DEL TEXTO-->
+        </div> 
     </div>
-</div>
+
+    <!--BARRA LATERAL TXT-->
+
+    <div id="contenedorAsideTexto" class="contenedorAside">
+        <div class="aside" id="asideTexto">
+            <h2>TEXTO</h2>
+            <!--AQUI SE AGREGARAN LAS FUNCIONES DE CONFIGURACION DEL TEXTO-->
+        
+            <!--Botón ingresar texto superior-->
+            <div class="botonAsideTxt" id="textoSuperior"></div>
+                <label>SUPERIOR</label>
+                <input type="text" id="botonTextoSuperior">
+            </div>
+
+            <div class="botonAsideTxt" id="sinTextoSuperior">
+                <input type="checkbox" id="botonSinTextoSuperior"> 
+                <label>Sin texto superior</label>
+            </div>
+
+            <!--Botón ingresar texto superior-->
+            <div class="botonAsideTxt" id="textoInferior">
+                <label>INFERIOR</label>
+                <input type="text" id="botonTextoInferior">
+            </div>
+
+            <div class="botonAsideTxt" id="sinTextoInferior">
+                <input type="checkbox" id="botonSinTextoInferior"> 
+                <label>Sin texto superior</label>
+            </div>
+
+            <!--Botón fuente-->
+            <div class="botonAsideTxt" id="fuenteSeleccionar">
+                <label>FUENTE</label>
+                <select id="seleccFuente">
+                    <option value="Arial">Arial</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="American Typewriter">American Typewriter</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+            </div>
+
+            <div class="botonAsideTxt" id="tamañoFuente">
+                <input type="number" id="seleccionarTamañoFuente" min="0" max="120" value="40">
+            </div>
+
+            <div class="botonAsideTxt" id="alinearIzquierda">
+                <button class="botonesAlineadoTxt" id="botónAlinearIzq">
+                    <i class="fa-solid fa-align-left" style="color: #000000;"></i>
+                </button>
+            </div>
+
+            <div class="botonAsideTxt" id="alinearCentro">
+                <button class="botonesAlineadoTxt" id="botónAlinearCent">
+                    <i class="fa-solid fa-align-center" style="color: #000000;"></i>
+                </button>
+            </div>
+
+            <div class="botonAsideTxt" id="alinearDerecha">
+                <button class="botonesAlineadoTxt" id="botónAlinearDer">
+                    <i class="fa-solid fa-align-right" style="color: #000000;"></i>
+                </button>
+            </div>
+
+            <!--Botón color del texto-->
+            <div class="botonAsideTxt" id="colorTxt">
+                <label>COLOR</label>
+                <input type="color" id="botonColorTxt">
+            </div>
+
+            <div class="botonAsideTxt" id="colorFondoTxt">
+                <label>FONDO</label>
+                <input type="color" id="botonColorFondo">
+            </div>
+
+            <div class="botonAsideTxt" id="fondoTransparente">
+                <input type="checkbox" id="botonFondoTransparente"> 
+                <label>Fondo transparente</label>
+            </div>
+
+            <!--Botón contorno-->
+            <div class="botonAsideTxt" id="ningunContorno">
+                <label>CONTORNO</label>
+                <button id="botonNingunContorno">Ninguno</button>
+            </div> 
+
+            <div class="botonAsideTxt" id="claroContorno">
+                <button id="botonClaroContorno">Claro</button>
+            </div> 
+
+            <div class="botonAsideTxt" id="oscuroContorno">
+                <button id="botonOscuroContorno">Oscuro</button>
+            </div> 
+
+            <!--Botón espaciado-->
+            <div class="botonAsideTxt" id="espaciado">
+                <label>ESPACIADO</label>
+                <input type="number" id="botonEspaciado" min="0" max="30" value="0">
+            </div>
+
+            <!--Botón interlineado-->
+            <div class="botonAsideTxt" id="interlineado">
+                <label>INTERLINEADO</label>
+                <select id="botonInterlineado">
+                    <option value="0.8">0.8</option>
+                    <option value="1">1</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                </select>
+            </div> 
+
+        </div>
+    </div>
 
     <footer>
        <p>Creado con ♥ por Mafer Castro </p> <!--Footer OPCIONAL con linkeo a redes sociales-->
