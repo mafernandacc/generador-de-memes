@@ -129,7 +129,31 @@ aside {
     margin: 5px;
 }
 
+#botonTextoSuperior {
+   width: 90%;
+}
 
+#botonTextoInferior {
+    width: 90%;
+ }
+
+#sinTextoSuperior {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+#sinTextoInferior {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+#fondoTransparente {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
 
 
 /* FOOTER */ 
@@ -137,4 +161,38 @@ aside {
 footer p {
   color: rgba(128, 128, 128, 0.13);  
   text-align: center;
+}
+
+
+
+
+/*ESTILOS MODO OSCURO//
+/* Estilos para el modo oscuro */
+.modo-oscuro {
+    background-color: #121212ce;  
+}
+
+.modo-oscuro header {
+    background-color: #0e0d11b4;
+}
+
+.modo-oscuro #tituloPagina {
+    color: white;
+}
+
+.modo-oscuro label {
+    color: white;
+}
+
+.modo-oscuro .boton {
+    background-color:#0e0d11b4;
+    color: white;
+}
+
+.modo-oscuro i {
+    color: aliceblue;
+}
+
+.modo-oscuro h2 {
+    color: white;
 }

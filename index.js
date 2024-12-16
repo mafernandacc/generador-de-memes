@@ -422,4 +422,58 @@ $botonInterlineado.addEventListener('change', function() {
 });
 
 
+//DESCARGAR MEME
+//Pendiente revisar si esta es la forma correcta//
+// Obtener los elementos necesarios
+const botonDescargarMeme = document.getElementById('botonDescargarMeme');
+const meme = document.getElementById('meme');
+const imagenMeme = document.getElementById('imagenMeme');
+
+// Función para descargar el meme como imagen
+botonDescargarMeme.addEventListener('click', function() {
+    // Asegúrate de que la imagen esté cargada
+    if (imagenMeme.src === "") {
+        alert("Por favor, carga una imagen primero.");
+        return;
+    }
+
+    // Usamos html2canvas para tomar una captura del contenedor del meme
+    html2canvas(meme, {
+        logging: true,  // Para ver lo que está haciendo html2canvas en la consola
+        useCORS: true,  // Permite usar imágenes de otros dominios
+        allowTaint: true,  // Permite el uso de imágenes de otros dominios
+        backgroundColor: null,  // Mantener el fondo transparente si se desea
+    }).then(function(canvas) {
+        // Convertimos el canvas a una imagen en formato PNG
+        const image = canvas.toDataURL("image/png");
+        
+        // Creamos un enlace para descargar la imagen
+        const enlace = document.createElement('a');
+        enlace.href = image;
+        enlace.download = 'meme.png'; // Nombre del archivo que se descargará
+        enlace.click(); // Simula el clic en el enlace para iniciar la descarga
+    }).catch(function(error) {
+        console.error("Error al generar la imagen:", error);
+    });
+});
+
+// MODO OSCURO//
+const botonModoOscuro = document.getElementById('botonModoOscuro');
+const body = document.body;
+const contenedorAsideImg = document.getElementById('contenedorAsideImg');
+const contenedorAsideTexto = document.getElementById('contenedorAsideTexto');
+const contenedorBotonesHeader = document.getElementById('contenedorBotonesHeader');
+
+botonModoOscuro.addEventListener('click', function() {
+    body.classList.toggle('modo-oscuro');
+    contenedorAsideImg.classList.toggle('modo-oscuro');
+    contenedorAsideTexto.classList.toggle('modo-oscuro');
+    contenedorBotonesHeader.classList.toggle('modo-oscuro');
+    
+    if (body.classList.contains('modo-oscuro')) {
+        botonModoOscuro.innerHTML = '<i class="fa-regular fa-lightbulb" style="color: rgb(250, 250, 250);"></i> Modo claro';
+    } else {
+        botonModoOscuro.innerHTML = '<i class="fa-regular fa-lightbulb" style="color: rgb(0, 0, 0);"></i> Modo oscuro';
+    }
+});
 
