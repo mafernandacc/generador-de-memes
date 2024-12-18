@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="./estilos/styles.css"> <!--Linkeo CSS-->
     <script src="https://kit.fontawesome.com/8e139616bd.js" crossorigin="anonymous"></script> <!--Linkeo iconos Font Awesome-->
     <link rel="icon" type="image/jpg" href="https://images.vexels.com/content/134485/preview/cool-emoji-emoticon-bc7065.png"/> <!--Linkeo favicon-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script> <!--Linkeo libreria para descargar meme-->
+   <!-- Librería dom-to-image  para descarga meme-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <!-- Librería FileSaver.js para descargar meme-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
 </head>
 
 <header>
@@ -194,19 +198,19 @@
             </div>
 
             <div class="botonAsideTxt" id="alinearIzquierda">
-                <button class="botonesAlineadoTxt" id="botónAlinearIzq">
+                <button class="botonesAlineadoTxt" id="botónAlinearIzq" title="Izquierda">
                     <i class="fa-solid fa-align-left" style="color: #000000;"></i>
                 </button>
             </div>
 
             <div class="botonAsideTxt" id="alinearCentro">
-                <button class="botonesAlineadoTxt" id="botónAlinearCent">
+                <button class="botonesAlineadoTxt" id="botónAlinearCent" title="Centro">
                     <i class="fa-solid fa-align-center" style="color: #000000;"></i>
                 </button>
             </div>
 
             <div class="botonAsideTxt" id="alinearDerecha">
-                <button class="botonesAlineadoTxt" id="botónAlinearDer">
+                <button class="botonesAlineadoTxt" id="botónAlinearDer" title="Derecha">
                     <i class="fa-solid fa-align-right" style="color: #000000;"></i>
                 </button>
             </div>
@@ -266,6 +270,11 @@
     <footer>
        <p>Creado con ♥ por Mafer Castro </p> <!--Footer OPCIONAL con linkeo a redes sociales-->
     </footer>
+
+
+
+
+
 
     <script src="./index.js"></script> <!--Linkeo JavaScript-->
 </body>

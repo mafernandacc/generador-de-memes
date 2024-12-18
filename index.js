@@ -423,39 +423,20 @@ $botonInterlineado.addEventListener('change', function() {
 
 
 //DESCARGAR MEME
-//Pendiente revisar si esta es la forma correcta//
-// Obtener los elementos necesarios
-const botonDescargarMeme = document.getElementById('botonDescargarMeme');
-const meme = document.getElementById('meme');
-const imagenMeme = document.getElementById('imagenMeme');
+// Evento para el botón de descarga
+document.getElementById("botonDescargarMeme").addEventListener("click", function () {
+  const memeContainer = document.getElementById("meme"); 
+  domtoimage
+    .toBlob(memeContainer)
+    .then(function (blob) {
 
-// Función para descargar el meme como imagen
-botonDescargarMeme.addEventListener('click', function() {
-    // Asegúrate de que la imagen esté cargada
-    if (imagenMeme.src === "") {
-        alert("Por favor, carga una imagen primero.");
-        return;
-    }
-
-    // Usamos html2canvas para tomar una captura del contenedor del meme
-    html2canvas(meme, {
-        logging: true,  // Para ver lo que está haciendo html2canvas en la consola
-        useCORS: true,  // Permite usar imágenes de otros dominios
-        allowTaint: true,  // Permite el uso de imágenes de otros dominios
-        backgroundColor: null,  // Mantener el fondo transparente si se desea
-    }).then(function(canvas) {
-        // Convertimos el canvas a una imagen en formato PNG
-        const image = canvas.toDataURL("image/png");
-        
-        // Creamos un enlace para descargar la imagen
-        const enlace = document.createElement('a');
-        enlace.href = image;
-        enlace.download = 'meme.png'; // Nombre del archivo que se descargará
-        enlace.click(); // Simula el clic en el enlace para iniciar la descarga
-    }).catch(function(error) {
-        console.error("Error al generar la imagen:", error);
+      saveAs(blob, "meme.png");
+    })
+    .catch(function (error) {
+      console.error("Error al generar la imagen del meme: ", error);
     });
 });
+
 
 // MODO OSCURO//
 const botonModoOscuro = document.getElementById('botonModoOscuro');
