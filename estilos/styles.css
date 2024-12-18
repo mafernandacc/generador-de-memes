@@ -187,6 +187,10 @@ footer p {
     background-color: #0e0d11b4;
 }
 
+.modo-oscuro #contenedorBotonesHeader {
+    background-color:transparent;
+}
+
 .modo-oscuro #tituloPagina {
     color: white;
 }
@@ -301,5 +305,5 @@ footer p {
 .modo-oscuro h2 {
     color: white;
 }
-
 }
+
