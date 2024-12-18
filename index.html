@@ -20,15 +20,15 @@
    <!--BOTONES DEL HEADER-->
    <div id="contenedorBotonesHeader"> 
         <ul id="listaBotonesHeader">
-            <button class="boton" id="botonConfiguracionImagen"> <!--Boton configuración imagen--> 
+            <button class="boton" id="botonConfiguracionImagen" title="Configurar imagen"> <!--Boton configuración imagen--> 
                 <i class="fa-regular fa-image" id="iconoImg" ></i>
                 Imagen
             </button>
-            <button class="boton" id="botonConfiguracionTexto">  <!--Boton configuración texto--> 
+            <button class="boton" id="botonConfiguracionTexto" title="Configurar texto">  <!--Boton configuración texto--> 
                 <i class="fa-solid fa-font" id="iconoTxt"></i>
                 Texto
             </button>
-            <button class="boton"  id="botonModoOscuro">
+            <button class="boton"  id="botonModoOscuro" title="Modo Oscuro">
                 <i class="fa-regular fa-lightbulb"></i>  <!--Boton cambio modo oscuro/modo claro--> 
                 Modo oscuro
             </button>
@@ -43,11 +43,11 @@
         <div id="meme">
             <p class="textoMeme" id="textoMemeSuperior">TEXTO SUPERIOR</p> <!--Texto superior del meme--> 
 
-            <img id="imagenMeme">  <!--Imagen ingresada por medio de un URL-->
+            <img id="imagenMeme" title="Meme" alt="Meme">  <!--Imagen ingresada por medio de un URL-->
 
             <p class="textoMeme" id="textoMemeInferior">TEXTO INFERIOR</p> <!--Texto inferior del meme-->
         </div>
-        <button id="botonDescargarMeme"> <!--Boton de descarga-->
+        <button id="botonDescargarMeme" title="Descargar"> <!--Boton de descarga-->
             <i class="fa-solid fa-download" style="color: rgb(250, 250, 250);"></i>
             Descargar meme
         </button>
@@ -66,14 +66,14 @@
             <div class="botonAsideImg" id="inputUrl">
                 <label class="labelAside">URL</label>
                 <input type="text" id="urlImg" placeholder="Pega el URL de la imagen" />
-                <button id="cargarImg">Cargar Imagen</button>
+                <button id="cargarImg" title="Cargar imagen">Cargar Imagen</button>
             </div>
 
             <!--Botón FONDO-->
             <div class="botonAsideImg" id="inputFondo">
                 <label class="labelAside">FONDO</label>
                 <input type="color" id="colorFondoImg">
-                <select id="blendMode">
+                <select id="blendMode" title="Fondo">
                     <option value="normal">Normal</option>
                     <option value="multiply">Multiplicar</option>
                     <option value="screen">Pantalla</option>
@@ -88,35 +88,35 @@
                 <!--Botón BRILLO-->
                 <div class="botonAsideImg" id="inputBrillo">
                     <label>BRILLO</label>
-                    <input type="range" id="brilloImg">
+                    <input type="range" id="brilloImg" title="Brillo">
                 </div>
 
                 <!--Botón OPACIDAD -->
                 <div class="botonAsideImg" id="inputOpacidad">
                     <label>OPACIDAD</label>
-                    <input type="range" id="opacidadImg">
+                    <input type="range" id="opacidadImg" title="Rango">
                 </div>
 
                 <!--Botón CONTRASTE -->
                 <div class="botonAsideImg" id="inputContraste">
                     <label>CONTRASTE</label>
-                    <input type="range" id="contrasteImg">
+                    <input type="range" id="contrasteImg" title="Contraste">
                 </div>
 
                 <!--Botón DESENFOQUE -->
                 <div class="botonAsideImg" id="inputDesenfoque">
                     <label>DESENFOQUE</label>
-                    <input type="range" id="desenfoqueImg">
+                    <input type="range" id="desenfoqueImg" title="Desenfoque">
                 </div>
 
                 <!--Botón ESCALA DE GRISES -->
                 <div class="botonAsideImg" id="inputEscala">
                     <label>ESCALA DE GRISES</label>
-                    <input type="range" id="escalaImg">
+                    <input type="range" id="escalaImg" title="Escla de grises">
                 </div>
 
                 <!--Botón SEPIA-->
-                <div class="botonAsideImg" id="inputSepia">
+                <div class="botonAsideImg" id="inputSepia" title="Sepia">
                     <label>SEPIA</label>
                     <input type="range" id="sepiaImg">
                 </div>
@@ -124,24 +124,24 @@
                 <!--Botón HUE -->
                 <div class="botonAsideImg" id="inputHue">
                     <label>HUE</label>
-                    <input type="range" id="hueImg">
+                    <input type="range" id="hueImg" title="HUE">
                 </div>
 
                 <!--Botón SATURADO -->
                 <div class="botonAsideImg" id="inputSaturado">
                     <label>SATURADO</label>
-                    <input type="range" id="saturadoImg">
+                    <input type="range" id="saturadoImg" title="Rango">
                 </div>
 
                 <!--Botón NEGATIVO -->
                 <div class="botonAsideImg" id="inputNegativo">
                     <label>NEGATIVO</label>
-                    <input type="range" id="negativoImg">
+                    <input type="range" id="negativoImg" title="Negativo">
                 </div>
                 
                 <!--Botón RESTABLECER FILTROS-->
                 <div class="botonAsideImg" id="inputNegativo"> 
-                    <button id="restablecerFiltros">Restablecer filtros</button>
+                    <button id="restablecerFiltros" title="Restablecer filtros">Restablecer filtros</button>
                 </div>
 
             </div>
@@ -159,29 +159,29 @@
             <!--Botón ingresar texto superior-->
             <div class="botonAsideTxt" id="textoSuperior"></div>
                 <label>SUPERIOR</label>
-                <input type="text" id="botonTextoSuperior">
+                <input type="text" id="botonTextoSuperior" title="Texto superior">
             </div>
 
             <div class="botonAsideTxt" id="sinTextoSuperior">
-                <input type="checkbox" id="botonSinTextoSuperior"> 
+                <input type="checkbox" id="botonSinTextoSuperior" title="Sin texto superior"> 
                 <label>Sin texto superior</label>
             </div>
 
             <!--Botón ingresar texto superior-->
             <div class="botonAsideTxt" id="textoInferior">
                 <label>INFERIOR</label>
-                <input type="text" id="botonTextoInferior" >
+                <input type="text" id="botonTextoInferior" title="Texto inferior">
             </div>
 
             <div class="botonAsideTxt" id="sinTextoInferior">
-                <input type="checkbox" id="botonSinTextoInferior"> 
+                <input type="checkbox" id="botonSinTextoInferior" title="Sin texto inferior"> 
                 <label>Sin texto superior</label>
             </div>
 
             <!--Botón fuente-->
             <div class="botonAsideTxt" id="fuenteSeleccionar">
                 <label>FUENTE</label>
-                <select id="seleccFuente">
+                <select id="seleccFuente" title="Seleccionar fuente">
                     <option value="Arial">Arial</option>
                     <option value="Arial Black">Arial Black</option>
                     <option value="American Typewriter">American Typewriter</option>
@@ -194,7 +194,7 @@
             </div>
 
             <div class="botonAsideTxt" id="tamañoFuente">
-                <input type="number" id="seleccionarTamañoFuente" min="0" max="120" value="40">
+                <input type="number" id="seleccionarTamañoFuente" min="0" max="120" value="40" title="Tamaño fuente">
             </div>
 
             <div class="botonAsideTxt" id="alinearIzquierda">
@@ -218,43 +218,43 @@
             <!--Botón color del texto-->
             <div class="botonAsideTxt" id="colorTxt">
                 <label>COLOR</label>
-                <input type="color" id="botonColorTxt">
+                <input type="color" id="botonColorTxt" title="Color texto">
             </div>
 
             <div class="botonAsideTxt" id="colorFondoTxt">
                 <label>FONDO</label>
-                <input type="color" id="botonColorFondo">
+                <input type="color" id="botonColorFondo" title="Color fondo">
             </div>
 
             <div class="botonAsideTxt" id="fondoTransparente">
-                <input type="checkbox" id="botonFondoTransparente"> 
+                <input type="checkbox" id="botonFondoTransparente" title="Fondo transparente"> 
                 <label>Fondo transparente</label>
             </div>
 
             <!--Botón contorno-->
             <div class="botonAsideTxt" id="ningunContorno">
                 <label>CONTORNO</label>
-                <button id="botonNingunContorno">Ninguno</button>
+                <button id="botonNingunContorno" title="Sin contorno">Ninguno</button>
             </div> 
 
             <div class="botonAsideTxt" id="claroContorno">
-                <button id="botonClaroContorno">Claro</button>
+                <button id="botonClaroContorno" title="Contorno claro">Claro</button>
             </div> 
 
             <div class="botonAsideTxt" id="oscuroContorno">
-                <button id="botonOscuroContorno">Oscuro</button>
+                <button id="botonOscuroContorno" title="Contorno oscuro">Oscuro</button>
             </div> 
 
             <!--Botón espaciado-->
             <div class="botonAsideTxt" id="espaciado">
                 <label>ESPACIADO</label>
-                <input type="number" id="botonEspaciado" min="0" max="30" value="0">
+                <input type="number" id="botonEspaciado" min="0" max="30" value="0" title="Espaciado">
             </div>
 
             <!--Botón interlineado-->
             <div class="botonAsideTxt" id="interlineado">
                 <label>INTERLINEADO</label>
-                <select id="botonInterlineado">
+                <select id="botonInterlineado" title="Interlineado">
                     <option value="0.8">0.8</option>
                     <option value="1">1</option>
                     <option value="1.2">1.2</option>
