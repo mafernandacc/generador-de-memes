@@ -16,19 +16,27 @@ header {
 }
 
 #tituloPagina {
-margin-bottom: 0;
-font-weight: lighter;
+    margin-bottom: 0;
+    font-weight: lighter;
+    padding-right: 150px;
+
 }
 
 #listaBotonesHeader {
    padding: 0%;
+   padding-right: 150px;
+   
 }
 
 .boton {
     border: none;
     background-color:rgb(224, 224, 224);
+    border-radius: 5px;
 }
 
+.boton:hover {
+    background-color: rgba(128, 128, 128, 0.171);
+}
 
 /* BODY */
 #contenedorMeme {
@@ -36,7 +44,7 @@ font-weight: lighter;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    padding-right: 20%;
 }
 
 #meme {
@@ -51,7 +59,6 @@ font-weight: lighter;
 }
 
 #imagenMeme {
-    width: 100%;
     flex-grow: 1;
     background-size: cover;
     margin: 0;
@@ -71,15 +78,19 @@ font-weight: lighter;
 }
 
 #botonDescargarMeme {
-    margin-top: 30px;
+    margin-top: 170px;
     padding: 15px 15px;
     height: auto;
     background-color: #2e7d32;
     color: white;
     border: #2e7d32;
     border-radius: 5px;
+    position: relative;
 }
 
+#botonDescargarMeme:hover {
+    background-color: #1d6120;
+}
 
 /*BARRA LATERAL*/ 
 .contenedorAside {
@@ -161,8 +172,8 @@ aside {
 footer p {
   color: rgba(128, 128, 128, 0.13);  
   text-align: center;
+  padding-right: 20%;
 }
-
 
 
 
@@ -197,3 +208,98 @@ footer p {
     color: white;
 }
 
+/*DISEÑO RESPOSIVO */
+/*Móvil */
+
+@media (max-width: 768px) {
+    body {
+        margin: 10%;
+    }
+
+    header {
+        flex-direction: column;
+       margin-bottom: 15px;
+    }
+
+    #tituloPagina {
+        font-size: 30px;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    #listaBotonesHeader {
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .boton {
+        margin: 5px 0;
+    }
+
+    #contenedorMeme {
+        padding-left: 20%;
+    }
+
+    #meme {
+        height: auto;
+    }
+
+    .textoMeme {
+        font-size: 18px;
+        padding: 20px 0;
+    }
+
+    #botonDescargarMeme {
+        width: 100%;
+        padding: 10px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .contenedorAside {
+        width: 100%;
+        position: relative;
+        background-color: #fff;
+        padding: 10px;
+        height: auto;
+    }
+
+    .aside h2 {
+        font-size: 18px;
+    }
+
+    footer p {
+        padding-right: 0;
+    }
+
+    /*MODO OSCURO MÓVIL*/
+    .modo-oscuro {
+    background-color: #121212ce;  
+}
+
+.modo-oscuro header {
+    background-color: #0e0d11b4;
+}
+
+.modo-oscuro #tituloPagina {
+    color: white;
+}
+
+.modo-oscuro label {
+    color: white;
+}
+
+.modo-oscuro .boton {
+    background-color:#0e0d11b4;
+    color: white;
+}
+
+.modo-oscuro i {
+    color: aliceblue;
+}
+
+.modo-oscuro h2 {
+    color: white;
+}
+
+}
